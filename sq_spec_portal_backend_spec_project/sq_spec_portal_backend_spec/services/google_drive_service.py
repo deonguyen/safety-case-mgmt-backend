@@ -23,13 +23,11 @@ def initialize_google_drive_service():
     """
     Authenticate and build the Google Drive service using existing service account credentials.
     """
-    # credentials = service_account.Credentials.from_service_account_file(
-    #     SqSpecPortalBackendSpecConfig.GOOGLE_CREDENTIALS,
-    #     scopes=["https://www.googleapis.com/auth/drive.readonly"],
-    # )
-    # return build("drive", "v3", credentials=credentials)
-    return build("drive", "v3", developerKey="AIzaSyD3jotRJ2-yeY0IBsYvpbCNedrj6Ju66gA")
-
+    credentials = service_account.Credentials.from_service_account_file(
+        SqSpecPortalBackendSpecConfig.GOOGLE_CREDENTIALS,
+        scopes=["https://www.googleapis.com/auth/drive.readonly"],
+    )
+    return build("drive", "v3", credentials=credentials)
 
 def list_google_drive_files(service, folder_id, path=""):
     """
