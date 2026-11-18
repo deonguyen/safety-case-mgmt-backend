@@ -1,0 +1,218 @@
+name: Backend Build, Publish, and Deploy Staging to AWS ECR and ECS
+
+on:
+  workflow_dispatch: # Enables the manual trigger button
+    inputs:
+      image_tag:
+        description: "Image tag to use for the build and deployment"
+        required: true
+        default: "staging"
+
+env:
+  AWS_REGION: us-east-1 # Change to your AWS region
+
+jobs:
+  build-and-publish:
+    name: Build and Publish
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # This is required for OIDC
+      contents: read # This is required for actions/checkout
+
+    strategy:
+      matrix:
+        service:
+          - name: backend-auth-service-staging
+            dockerfile: ./sq_spec_portal_backend_auth_project/Dockerfile.staging
+            ecr_repo: sq-spec-portal-backend-auth-repos-staging
+            env_file: ./sq_spec_portal_backend_auth_project/.env
+            global_bundle_file: ./sq_spec_portal_backend_auth_project/global-bundle.pem
+          - name: backend-spec-service-staging
+            dockerfile: ./sq_spec_portal_backend_spec_project/Dockerfile.staging
+            ecr_repo: sq-spec-portal-backend-spec-repos-staging
+            env_file: ./sq_spec_portal_backend_spec_project/.env
+            global_bundle_file: ./sq_spec_portal_backend_spec_project/global-bundle.pem
+          - name: backend-snapshot-service-staging
+            dockerfile: ./sq_spec_portal_backend_snapshot_project/Dockerfile.staging
+            ecr_repo: sq-spec-portal-backend-snapshot-repos-staging
+            env_file: ./sq_spec_portal_backend_snapshot_project/.env
+            global_bundle_file: ./sq_spec_portal_backend_snapshot_project/global-bundle.pem
+          - name: backend-admin-service-staging
+            dockerfile: ./sq_spec_portal_backend_admin_project/Dockerfile.staging
+            ecr_repo: sq-spec-portal-backend-admin-repos-staging
+            env_file: ./sq_spec_portal_backend_admin_project/.env
+            global_bundle_file: ./sq_spec_portal_backend_admin_project/global-bundle.pem
+          - name: backend-static-service-staging
+            dockerfile: ./Dockerfile.nginx.staging
+            ecr_repo: sq-spec-portal-backend-static-repos-staging
+            env_file: ./sq_spec_portal_backend_admin_project/.env # For collectstatic
+            global_bundle_file: "" # Nginx doesn't need it
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Download AWS RDS CA bundle to service directory
+        run: |
+          BUNDLE_PATH="${{ matrix.service.global_bundle_file }}"
+          if [ -n "$BUNDLE_PATH" ]; then
+            mkdir -p "$(dirname "$BUNDLE_PATH")"
+            curl -o "$BUNDLE_PATH" https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+            echo "Downloaded RDS CA bundle to $BUNDLE_PATH"
+          else
+            echo "Skipping RDS CA bundle download as global_bundle_file is not defined for this service."
+          fi
+
+      - name: Replace .env placeholders with GitHub Secrets
+        run: |
+          # Define the path to your .env file.
+          # This path is dynamically set from the matrix.service.env_file input.
+          ENV_FILE="${{ matrix.service.env_file }}"
+
+          # Check if the .env file exists before attempting to modify it
+          if [ -f "$ENV_FILE" ]; then
+            echo "Updating $ENV_FILE with GitHub secrets..."
+
+            # Use sed to replace the placeholder values with the actual GitHub secrets.
+            # The 'g' flag ensures all occurrences on a line are replaced.
+            # The '|' delimiter is used in sed to avoid issues with '/' in paths or values.
+            sed -i "s|AWS_ACCOUNT_ID=\${AWS_ACCOUNT_ID}|AWS_ACCOUNT_ID=${{ secrets.AWS_ACCOUNT_ID }}|g" "$ENV_FILE"
+            sed -i "s|AWS_ACCESS_KEY=\${AWS_ACCESS_KEY}|AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY }}|g" "$ENV_FILE"
+            sed -i "s|AWS_ACCESS_SECRET=\${AWS_ACCESS_SECRET}|AWS_ACCESS_SECRET=${{ secrets.AWS_ACCESS_SECRET }}|g" "$ENV_FILE"
+            sed -i "s|AWS_DEFAULT_REGION=\${AWS_DEFAULT_REGION}|AWS_DEFAULT_REGION=${{ secrets.AWS_DEFAULT_REGION }}|g" "$ENV_FILE"
+            sed -i "s|AWS_SECRETS_TO_SETTINGS=\${AWS_SECRETS_TO_SETTINGS}|AWS_SECRETS_TO_SETTINGS=${{ secrets.AWS_SECRETS_TO_SETTINGS }}|g" "$ENV_FILE"
+
+            echo "$ENV_FILE updated successfully."
+          else
+            echo "$ENV_FILE not found at the current path, skipping .env replacement."
+            # You might want to add an exit 1 here if the .env file is critical for the build
+            # exit 1
+          fi
+
+      - name: Install AWS CLI
+        run: |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install --update
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          audience: sts.amazonaws.com
+
+      - name: Verify AWS identity
+        run: aws sts get-caller-identity
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Build and push Docker image for ${{ matrix.service.name }}
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: ${{ matrix.service.dockerfile }}
+          push: true
+          tags: ${{ steps.login-ecr.outputs.registry }}/${{ matrix.service.ecr_repo }}:staging,${{ steps.login-ecr.outputs.registry }}/${{ matrix.service.ecr_repo }}:${{ github.event.inputs.image_tag }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Logout of Amazon ECR
+        if: always()
+        run: docker logout ${{ steps.login-ecr.outputs.registry }}
+
+  deploy:
+    name: Deploy to ECS
+    runs-on: ubuntu-latest
+    needs: build-and-publish
+    permissions:
+      id-token: write # This is required for OIDC
+      contents: read # This is required for actions/checkout
+
+    strategy:
+      matrix:
+        service:
+          - name: auth
+            task_definition: .ecs/task-definition-auth.json
+            ecr_repo: sq-spec-portal-backend-auth-repos-staging
+            ecs_service: backend-auth-service-staging
+            container_name: backend-auth-container-staging
+          - name: spec
+            task_definition: .ecs/task-definition-spec.json
+            ecr_repo: sq-spec-portal-backend-spec-repos-staging
+            ecs_service: backend-spec-service-staging
+            container_name: backend-spec-container-staging
+          - name: admin
+            task_definition: .ecs/task-definition-admin.json
+            ecr_repo: sq-spec-portal-backend-admin-repos-staging
+            ecs_service: backend-admin-service-staging
+            container_name: backend-admin-container-staging
+          - name: snapshot
+            task_definition: .ecs/task-definition-snapshot.json
+            ecr_repo: sq-spec-portal-backend-snapshot-repos-staging
+            ecs_service: backend-snapshot-service-staging
+            container_name: backend-snapshot-container-staging
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Fill in the new image ID in the Amazon ECS task definition
+        id: task-def
+        uses: aws-actions/amazon-ecs-render-task-definition@v1.9.0
+        with:
+          task-definition: ${{ matrix.service.task_definition }}
+          container-name: ${{ matrix.service.container_name }}
+          image: ${{ steps.login-ecr.outputs.registry }}/${{ matrix.service.ecr_repo }}:${{ github.event.inputs.image_tag }}
+
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          service: ${{ matrix.service.ecs_service }}
+          cluster: backend-cluster-staging
+          wait-for-service-stability: true
+          force-new-deployment: truehelp
+
+  notify-build-completion:
+    name: Notify Build Completion
+    runs-on: ubuntu-latest
+    needs: [build-and-publish, deploy] # This job depends on the build and deploy jobs
+    if: always() # This ensures the job runs even if previous jobs fail
+    steps:
+      - name: Send Build Completion Notification
+        env:
+          BUILD_STATUS: ${{ needs.build-and-publish.result }}
+          DEPLOY_STATUS: ${{ needs.deploy.result }}
+        run: |
+          if [ -z "${{ secrets.WEBHOOK_URL }}" ]; then
+            echo "WEBHOOK_URL secret is not set. Skipping notification."
+            exit 0
+          fi
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+                  "github_event": "${{ secrets.GITHUB_EVENT }}",
+                  "workflow_run_id": "${{ github.run_id }}",
+                  "build_status": "${{ env.BUILD_STATUS }}",
+                  "deploy_status": "${{ env.DEPLOY_STATUS }}",
+                  "github_sha": "${{ github.sha }}",
+                  "webhook_secret": "${{ secrets.WEBHOOK_SECRET }}",
+                  "project_id": "${{ secrets.SQNA_PROJECT_ID }}"
+                }' \
+            "${{ secrets.WEBHOOK_URL }}"

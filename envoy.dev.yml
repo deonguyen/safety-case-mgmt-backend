@@ -1,0 +1,114 @@
+overload_manager:
+  resource_monitors:
+    - name: "envoy.resource_monitors.global_downstream_max_connections"
+      typed_config:
+        "@type": "type.googleapis.com/envoy.extensions.resource_monitors.downstream_connections.v3.DownstreamConnectionsConfig"
+        max_active_downstream_connections: 10000
+
+static_resources:
+  listeners:
+    - name: listener_0
+      address:
+        socket_address:
+          address: 0.0.0.0
+          port_value: 8082
+      filter_chains:
+        - filters:
+            - name: envoy.filters.network.http_connection_manager
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+                stat_prefix: ingress_http
+                route_config:
+                  name: local_route
+                  virtual_hosts:
+                    - name: local_service
+                      domains: ["*"]
+                      routes:
+                        # Public routes that don't require a token
+                        - match:
+                            prefix: "/auth"
+                          route:
+                            cluster: auth_service
+                        - match:
+                            prefix: "/static"
+                          route:
+                            cluster: static_server_service
+                        - match:
+                            prefix: "/spec"
+                          route:
+                            cluster: spec_service
+                        - match:
+                            prefix: "/admin"
+                          route:
+                            cluster: admin_service
+                        - match:
+                            prefix: "/snapshot"
+                          route:
+                            cluster: snapshot_service
+                http_filters:
+                  - name: envoy.filters.http.router
+                    typed_config:
+                      "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+
+  clusters:
+    - name: admin_service
+      connect_timeout: 5s
+      type: LOGICAL_DNS
+      load_assignment:
+        cluster_name: admin_service
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: admin
+                      port_value: 5001 # The port your admin service listens on.
+    - name: auth_service
+      connect_timeout: 5s
+      type: LOGICAL_DNS
+      # The 'auth' service name from docker-compose.
+      load_assignment:
+        cluster_name: auth_service
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: auth
+                      port_value: 5002 # The port your auth service listens on inside the container.
+    - name: spec_service
+      connect_timeout: 5s
+      type: LOGICAL_DNS
+      load_assignment:
+        cluster_name: spec_service
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: spec
+                      port_value: 5003 # The port your spec service listens on.
+    - name: snapshot_service
+      connect_timeout: 5s
+      type: LOGICAL_DNS
+      load_assignment:
+        cluster_name: snapshot_service
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: snapshot
+                      port_value: 5004 # The port your snapshot service listens on.
+    - name: static_server_service
+      connect_timeout: 5s
+      type: LOGICAL_DNS
+      load_assignment:
+        cluster_name: static_server_service
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: static-server
+                      port_value: 5080 # The port nginx listens on.

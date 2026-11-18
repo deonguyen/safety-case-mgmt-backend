@@ -1,1 +1,1 @@
-# safety-case-mgmt-backend
+# sq-spec-portal-backend-backend

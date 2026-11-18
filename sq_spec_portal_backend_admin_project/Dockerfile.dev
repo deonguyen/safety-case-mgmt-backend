@@ -1,0 +1,33 @@
+# Development Dockerfile
+FROM python:3.13
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /usr/src/app
+
+# Install and update CA Certificates for SSL/TLS
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    ca-certificates && \
+    update-ca-certificates
+
+RUN pip install --upgrade pip 
+RUN pip install python-dotenv  
+RUN pip install psycopg2-binary boto3
+
+COPY ./sq_spec_portal_backend_admin_project ./sq_spec_portal_backend_admin_project
+
+RUN pip install --no-cache-dir -r sq_spec_portal_backend_admin_project/requirements.txt
+
+RUN pip install --extra-index-url http://host.docker.internal:8080/simple --trusted-host host.docker.internal sq-spec-portal-backend-core
+
+# Keep only the dev environment file
+RUN rm -f .env .env.staging .env.prod
+
+# Expose the port the app runs on
+EXPOSE 5001
+
+# Run Django’s development server
+CMD ["python", "sq_spec_portal_backend_admin_project/manage.py", "runserver", "0.0.0.0:5001"]

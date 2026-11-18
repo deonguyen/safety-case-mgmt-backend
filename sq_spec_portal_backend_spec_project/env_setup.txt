@@ -1,0 +1,26 @@
+# Windows
+python -m venv .venv_spec   
+./.venv_spec/scripts/activate   
+python -m pip install --upgrade pip   
+pip install -r requirements.txt  
+pip install python-dotenv  
+pip install psycopg2  
+pip install sq-spec-portal-backend-core --extra-index-url https://d20d6bbz9irale.cloudfront.net
+
+# Mac OS
+python3 -m venv .venv_spec   
+source .venv_spec/bin/activate   
+python3 -m pip install --upgrade pip   
+pip install -r requirements.txt  
+pip install python-dotenv  
+pip install psycopg2-binary
+pip install sq-spec-portal-backend-core --extra-index-url https://d20d6bbz9irale.cloudfront.net -force
+
+#SSH To EC2 Instance
+
+ssh -i "C:\AWS_EC2_Instance_Cert\ec2_ssh_instance.pem" -L 5432:sq-spec-portal-db-stage.cyjka22ku5q8.us-east-1.rds.amazonaws.com:5432 ec2-user@35.172.141.175 -N -v
+
+aws sso login --profile=woven-sso
+export AWS_PROFILE=woven-sso
+export AWS_DEFAULT_REGION=us-east-1
+aws ec2-instance-connect ssh --instance-id i-06584fe2c95fe955e --os-user ec2-user --connection-type eice --region us-east-1 --local-forwarding 5432:sq-spec-portal-db-stage.c6ji80k6i2dh.us-east-1.rds.amazonaws.com:5432

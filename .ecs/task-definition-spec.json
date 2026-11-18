@@ -1,0 +1,52 @@
+{
+  "family": "backend-spec-task-definition-stage",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::673515369016:role/backend-task-execution-role-stage",
+  "taskRoleArn": "arn:aws:iam::673515369016:role/backend-task-role-stage",
+  "runtimePlatform": {
+    "operatingSystemFamily": "LINUX",
+    "cpuArchitecture": "X86_64"
+  },
+  "containerDefinitions": [
+    {
+      "name": "backend-spec-container-stage",
+      "image": "673515369016.dkr.ecr.us-east-1.amazonaws.com/sq-spec-portal-backend-spec-repos-stage:stage",
+      "essential": true,
+      "cpu": 512,
+      "memory": 1024,
+      "portMappings": [
+        {
+          "name": "spec-5013-tcp",
+          "containerPort": 5013,
+          "hostPort": 5013,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/sq-spec-portal-backend-spec-log-group-stage",
+          "awslogs-region": "us-east-1",
+          "awslogs-create-group": "true",
+          "awslogs-stream-prefix": "backend-spec-container-stage"
+        }
+      },
+      "healthCheck": {
+        "command": [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5013/spec/health')"
+        ],
+        "interval": 30,
+        "timeout": 5,
+        "retries": 3,
+        "startPeriod": 60
+      }
+    }
+  ]
+}

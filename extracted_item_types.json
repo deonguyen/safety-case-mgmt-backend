@@ -1,0 +1,2262 @@
+[
+    {
+        "id": 22,
+        "typeKey": "ATT",
+        "display": "Attachment"
+    },
+    {
+        "id": 30,
+        "typeKey": "CMP",
+        "display": "Component"
+    },
+    {
+        "id": 31,
+        "typeKey": "SET",
+        "display": "Set"
+    },
+    {
+        "id": 32,
+        "typeKey": "FLD",
+        "display": "Folder"
+    },
+    {
+        "id": 33,
+        "typeKey": "TXT",
+        "display": "Text"
+    },
+    {
+        "id": 34,
+        "typeKey": "CORE",
+        "display": "Core"
+    },
+    {
+        "id": 35,
+        "typeKey": "TSTPL",
+        "display": "Test Plan"
+    },
+    {
+        "id": 36,
+        "typeKey": "TSTCY",
+        "display": "Test Cycle"
+    },
+    {
+        "id": 37,
+        "typeKey": "TSTRN",
+        "display": "Test Run"
+    },
+    {
+        "id": 132,
+        "typeKey": "DOC",
+        "display": "Documentation"
+    },
+    {
+        "id": 133,
+        "typeKey": "CR",
+        "display": "Change Request"
+    },
+    {
+        "id": 134,
+        "typeKey": "CHK",
+        "display": "Check Item"
+    },
+    {
+        "id": 135,
+        "typeKey": "TOOL",
+        "display": "Software Tool"
+    },
+    {
+        "id": 136,
+        "typeKey": "SHRQ",
+        "display": "Stakeholder Requirement"
+    },
+    {
+        "id": 137,
+        "typeKey": "SG",
+        "display": "Safety Goal"
+    },
+    {
+        "id": 138,
+        "typeKey": "HARA",
+        "display": "Hazard"
+    },
+    {
+        "id": 140,
+        "typeKey": "FSR",
+        "display": "Functional Safety Requirement"
+    },
+    {
+        "id": 141,
+        "typeKey": "SYSR",
+        "display": "System Requirement"
+    },
+    {
+        "id": 142,
+        "typeKey": "TSR",
+        "display": "Technical Safety Requirement"
+    },
+    {
+        "id": 143,
+        "typeKey": "ELEMENT",
+        "display": "Design Element"
+    },
+    {
+        "id": 144,
+        "typeKey": "VERTC",
+        "display": "Verification Test Case"
+    },
+    {
+        "id": 145,
+        "typeKey": "VALTC",
+        "display": "Validation Test Case"
+    },
+    {
+        "id": 146,
+        "typeKey": "IO",
+        "display": "Interface Specification"
+    },
+    {
+        "id": 147,
+        "typeKey": "HWRQ",
+        "display": "Hardware Requirement"
+    },
+    {
+        "id": 148,
+        "typeKey": "HWSR",
+        "display": "Hardware Safety Requirement"
+    },
+    {
+        "id": 149,
+        "typeKey": "SWRQ",
+        "display": "Suppiler requirement for OS / Sec"
+    },
+    {
+        "id": 150,
+        "typeKey": "SWSR",
+        "display": "Software Safety Requirement"
+    },
+    {
+        "id": 152,
+        "typeKey": "SWARCH",
+        "display": "Software Architectural Design"
+    },
+    {
+        "id": 153,
+        "typeKey": "SWDES",
+        "display": "Software Detailed Design"
+    },
+    {
+        "id": 154,
+        "typeKey": "SWUNIT",
+        "display": "Software Unit"
+    },
+    {
+        "id": 155,
+        "typeKey": "ID",
+        "display": "Item Definition"
+    },
+    {
+        "id": 157,
+        "typeKey": "User_Req",
+        "display": "User requirement"
+    },
+    {
+        "id": 158,
+        "typeKey": "LK_Use_Case",
+        "display": "Use case"
+    },
+    {
+        "id": 159,
+        "typeKey": "Safety_Req",
+        "display": "Safety Requirement"
+    },
+    {
+        "id": 160,
+        "typeKey": "Unit_Test_case",
+        "display": "Unit Test Case"
+    },
+    {
+        "id": 161,
+        "typeKey": "SEOOC_Context",
+        "display": "SEOOC Context"
+    },
+    {
+        "id": 162,
+        "typeKey": "SEOOC_Funct",
+        "display": "Functionality"
+    },
+    {
+        "id": 163,
+        "typeKey": "Hw_Testcase",
+        "display": "Hardware Test case"
+    },
+    {
+        "id": 164,
+        "typeKey": "AoU",
+        "display": "Assumption of Use"
+    },
+    {
+        "id": 166,
+        "typeKey": "App_Int_TC",
+        "display": "Application Integration Test Case"
+    },
+    {
+        "id": 167,
+        "typeKey": "Detail_Design",
+        "display": "Detailed Design"
+    },
+    {
+        "id": 168,
+        "typeKey": "Unit_Des_Ele",
+        "display": "Unit Design Element"
+    },
+    {
+        "id": 169,
+        "typeKey": "Highlvl_Des_Elem",
+        "display": "High Level Architecture Design Element"
+    },
+    {
+        "id": 170,
+        "typeKey": "Defect",
+        "display": "Defect"
+    },
+    {
+        "id": 171,
+        "typeKey": "Int_Elemnt",
+        "display": "Interfacing Element"
+    },
+    {
+        "id": 173,
+        "typeKey": "Stakeholder_Need",
+        "display": "Stakeholder Need"
+    },
+    {
+        "id": 174,
+        "typeKey": "Req_Basd_Test",
+        "display": "Requirement Based Testing"
+    },
+    {
+        "id": 175,
+        "typeKey": "Safe_Recmdnts",
+        "display": "Safety Analysis"
+    },
+    {
+        "id": 176,
+        "typeKey": "Mod_Int_TC",
+        "display": "Module Integration Testing"
+    },
+    {
+        "id": 177,
+        "typeKey": "Sw_Safe_Anays",
+        "display": "Software Safety Analyses"
+    },
+    {
+        "id": 178,
+        "typeKey": "Fn_Req",
+        "display": "Functional Requirement"
+    },
+    {
+        "id": 179,
+        "typeKey": "QATR",
+        "display": "Quality Attribute"
+    },
+    {
+        "id": 180,
+        "typeKey": "CSRQ",
+        "display": "Core System Requirement"
+    },
+    {
+        "id": 181,
+        "typeKey": "SSRQ",
+        "display": "System of Systems Requirement"
+    },
+    {
+        "id": 182,
+        "typeKey": "SSUBRQ",
+        "display": "Software Sub-system Requirement"
+    },
+    {
+        "id": 183,
+        "typeKey": "SCMPRQ",
+        "display": "Software Component Requirement"
+    },
+    {
+        "id": 184,
+        "typeKey": "SCTR",
+        "display": "System Constraint"
+    },
+    {
+        "id": 185,
+        "typeKey": "SSUBARC",
+        "display": "Software Sub-system Architecture Element"
+    },
+    {
+        "id": 186,
+        "typeKey": "SCMPARC",
+        "display": "Software Component Architecture Element"
+    },
+    {
+        "id": 187,
+        "typeKey": "SSARC",
+        "display": "System of Systems Architecture Element"
+    },
+    {
+        "id": 188,
+        "typeKey": "CSARC",
+        "display": "Core System Architecture Element"
+    },
+    {
+        "id": 189,
+        "typeKey": "USRSCE",
+        "display": "One Team User Scenario"
+    },
+    {
+        "id": 190,
+        "typeKey": "ESRQ",
+        "display": "External Systems Requirement"
+    },
+    {
+        "id": 191,
+        "typeKey": "CSRQAD",
+        "display": "A3 ECU Requirement Analysis Diagram"
+    },
+    {
+        "id": 192,
+        "typeKey": "ESSRQ",
+        "display": "External Systems Software Requirement"
+    },
+    {
+        "id": 193,
+        "typeKey": "ESHRQ",
+        "display": "External Systems Hardware Requirement"
+    },
+    {
+        "id": 194,
+        "typeKey": "ESARC",
+        "display": "External Systems Architecture Element"
+    },
+    {
+        "id": 195,
+        "typeKey": "CSHRQ",
+        "display": "Core System Hardware Requirement"
+    },
+    {
+        "id": 196,
+        "typeKey": "CSSRQ",
+        "display": "Core System Software Requirement"
+    },
+    {
+        "id": 197,
+        "typeKey": "E2ESRQ",
+        "display": "End to End Software Requirement"
+    },
+    {
+        "id": 198,
+        "typeKey": "E2ESARC",
+        "display": "End to End Software Architecture Element"
+    },
+    {
+        "id": 199,
+        "typeKey": "DIA",
+        "display": "Development Interface Agreement"
+    },
+    {
+        "id": 200,
+        "typeKey": "CSSARC",
+        "display": "Core System Software Architecture Element"
+    },
+    {
+        "id": 201,
+        "typeKey": "CSSRQAD",
+        "display": "Core System Software Requirement Analysis Diagram"
+    },
+    {
+        "id": 202,
+        "typeKey": "25TM_UC",
+        "display": "25TM\u30e6\u30fc\u30b9\u30b1\u30fc\u30b9"
+    },
+    {
+        "id": 203,
+        "typeKey": "25TM_MS",
+        "display": "25TM\u30e1\u30a4\u30f3\u30b7\u30ca\u30ea\u30aa"
+    },
+    {
+        "id": 204,
+        "typeKey": "TM_D",
+        "display": "Defect(\u6b20\u9665)"
+    },
+    {
+        "id": 206,
+        "typeKey": "TM_TC",
+        "display": "Test Case(\u30c6\u30b9\u30c8\u30b1\u30fc\u30b9)"
+    },
+    {
+        "id": 207,
+        "typeKey": "TM_TE",
+        "display": "Test Environment(\u30c6\u30b9\u30c8\u74b0\u5883)"
+    },
+    {
+        "id": 208,
+        "typeKey": "TM_TS",
+        "display": "Test Specification(\u30c6\u30b9\u30c8\u9805\u76ee)"
+    },
+    {
+        "id": 209,
+        "typeKey": "UC",
+        "display": "Use Case"
+    },
+    {
+        "id": 210,
+        "typeKey": "SYSARCH",
+        "display": "System Architecture"
+    },
+    {
+        "id": 212,
+        "typeKey": "SVER",
+        "display": "Subsystem Verification"
+    },
+    {
+        "id": 213,
+        "typeKey": "SUBSREQ",
+        "display": "Subsystem Requirement"
+    },
+    {
+        "id": 214,
+        "typeKey": "VAL",
+        "display": "Validation"
+    },
+    {
+        "id": 215,
+        "typeKey": "VER",
+        "display": "Verification"
+    },
+    {
+        "id": 216,
+        "typeKey": "L1",
+        "display": "System Requirement(L1)"
+    },
+    {
+        "id": 217,
+        "typeKey": "L2",
+        "display": "Segment Requirement(L2)"
+    },
+    {
+        "id": 219,
+        "typeKey": "AUTOSARAP",
+        "display": "AUTOSAR AP Requirement"
+    },
+    {
+        "id": 220,
+        "typeKey": "TMCReq",
+        "display": "TMC Requirement (Arene)"
+    },
+    {
+        "id": 221,
+        "typeKey": "CONDRQ",
+        "display": "Condition"
+    },
+    {
+        "id": 222,
+        "typeKey": "AppReq",
+        "display": "Application Requirement"
+    },
+    {
+        "id": 223,
+        "typeKey": "AppSpec",
+        "display": "Application Specification"
+    },
+    {
+        "id": 224,
+        "typeKey": "SNSVARI",
+        "display": "Sensor variation"
+    },
+    {
+        "id": 225,
+        "typeKey": "AUTOSARAPSP",
+        "display": "Supplier requirement for AP"
+    },
+    {
+        "id": 226,
+        "typeKey": "RCGREQ",
+        "display": "Recognition Requirement"
+    },
+    {
+        "id": 227,
+        "typeKey": "UCASEDIAG",
+        "display": "Usecase Analysis Diagram"
+    },
+    {
+        "id": 228,
+        "typeKey": "NONFUNCRQ",
+        "display": "Non-functional requirement"
+    },
+    {
+        "id": 229,
+        "typeKey": "SOSRQDIAG",
+        "display": "System of Systems Requirement Analysis Diagram"
+    },
+    {
+        "id": 230,
+        "typeKey": "SWEle",
+        "display": "SW Element"
+    },
+    {
+        "id": 231,
+        "typeKey": "AppEle",
+        "display": "APP Element"
+    },
+    {
+        "id": 232,
+        "typeKey": "SWReq",
+        "display": "SW Requirement"
+    },
+    {
+        "id": 233,
+        "typeKey": "AppReqt",
+        "display": "APP Requirement"
+    },
+    {
+        "id": 234,
+        "typeKey": "LNONFUNCRQ",
+        "display": "Logical Non Functional Requirement"
+    },
+    {
+        "id": 235,
+        "typeKey": "PNONFUNCRQ",
+        "display": "Physical Non Functional Requirement"
+    },
+    {
+        "id": 236,
+        "typeKey": "LSSRQ",
+        "display": "Logical System of Systems Requirement"
+    },
+    {
+        "id": 237,
+        "typeKey": "PSSRQ",
+        "display": "Physical System of Systems Requirement"
+    },
+    {
+        "id": 238,
+        "typeKey": "LCSRQ",
+        "display": "Logical Core System Requirement"
+    },
+    {
+        "id": 239,
+        "typeKey": "LPSRQ",
+        "display": "Logical Peripherals System Requirement"
+    },
+    {
+        "id": 240,
+        "typeKey": "PCSRQ",
+        "display": "Physical Core System Requirement"
+    },
+    {
+        "id": 241,
+        "typeKey": "PPSRQ",
+        "display": "Physical Peripherals System Requirement"
+    },
+    {
+        "id": 243,
+        "typeKey": "PESRQ",
+        "display": "Physical ECU Software Requirement"
+    },
+    {
+        "id": 244,
+        "typeKey": "PEHRQ",
+        "display": "Physical ECU Hardware Requirement"
+    },
+    {
+        "id": 245,
+        "typeKey": "SWR",
+        "display": "Software Requirements (Internal)"
+    },
+    {
+        "id": 246,
+        "typeKey": "OTNRQ",
+        "display": "OneTeam New Requirement"
+    },
+    {
+        "id": 247,
+        "typeKey": "ATestType",
+        "display": "A_Test_Type"
+    },
+    {
+        "id": 248,
+        "typeKey": "SYRD_SPEC",
+        "display": "STD System Functional Requirement"
+    },
+    {
+        "id": 249,
+        "typeKey": "SYRD_NSPEC",
+        "display": "STD System Non Functional Requirement"
+    },
+    {
+        "id": 250,
+        "typeKey": "SYAD_SPEC",
+        "display": "STD System Architecture Element"
+    },
+    {
+        "id": 251,
+        "typeKey": "SWRD_SPEC",
+        "display": "STD Software Functional Requirement"
+    },
+    {
+        "id": 252,
+        "typeKey": "SWRD_NSPEC",
+        "display": "STD Software Non Functional Requirement"
+    },
+    {
+        "id": 253,
+        "typeKey": "SWAD_SPEC",
+        "display": "STD Software Architecture Element"
+    },
+    {
+        "id": 254,
+        "typeKey": "SCRD_SPEC",
+        "display": "STD Software Component Functional Requirement"
+    },
+    {
+        "id": 255,
+        "typeKey": "SCRD_NSPEC",
+        "display": "STD Software Component Non Functional Requirement"
+    },
+    {
+        "id": 256,
+        "typeKey": "SCAD_SPEC",
+        "display": "STD Software Component Architecture Element"
+    },
+    {
+        "id": 257,
+        "typeKey": "EXP_Review1",
+        "display": "EXP ReviewChecklist_1"
+    },
+    {
+        "id": 258,
+        "typeKey": "EXP_Review2",
+        "display": "EXP ReviewChecklist_2"
+    },
+    {
+        "id": 259,
+        "typeKey": "EXP_Review3",
+        "display": "EXP ReviewChecklist_3"
+    },
+    {
+        "id": 260,
+        "typeKey": "Demo_SWRD_SPEC",
+        "display": "Demo Software Functional Requirement"
+    },
+    {
+        "id": 261,
+        "typeKey": "EXP_BL_Chart",
+        "display": "EXP Overall Baseline Control Chart"
+    },
+    {
+        "id": 262,
+        "typeKey": "IVIRQ",
+        "display": "IVI Requirement"
+    },
+    {
+        "id": 264,
+        "typeKey": "IVIRD",
+        "display": "IVI Reference Document"
+    },
+    {
+        "id": 266,
+        "typeKey": "URD_SPEC",
+        "display": "STD User Requirement"
+    },
+    {
+        "id": 267,
+        "typeKey": "SYIT",
+        "display": "STD System Test Specification"
+    },
+    {
+        "id": 268,
+        "typeKey": "TASK_SSR",
+        "display": "Tasktop trial Software Sub-system Requiremen"
+    },
+    {
+        "id": 269,
+        "typeKey": "SYRD_CS_SPEC",
+        "display": "STD A3 Core System Functional Requirement"
+    },
+    {
+        "id": 270,
+        "typeKey": "SYRD_PS_SPEC",
+        "display": "STD Peripherals System Functional Requirement"
+    },
+    {
+        "id": 271,
+        "typeKey": "SYRD_EU_SPEC",
+        "display": "STD A3 ECU Functional Requirement"
+    },
+    {
+        "id": 272,
+        "typeKey": "SYRD_SN_SPEC",
+        "display": "STD A3 Sensors Functional Requirement"
+    },
+    {
+        "id": 273,
+        "typeKey": "IVItest",
+        "display": "IVI test"
+    },
+    {
+        "id": 274,
+        "typeKey": "MOD_REQ",
+        "display": "Module Requirement"
+    },
+    {
+        "id": 275,
+        "typeKey": "COMP_REQ",
+        "display": "Component Requirement"
+    },
+    {
+        "id": 276,
+        "typeKey": "USR_REQ",
+        "display": "User Requirement"
+    },
+    {
+        "id": 277,
+        "typeKey": "SYS_REQ",
+        "display": "System Requirement"
+    },
+    {
+        "id": 278,
+        "typeKey": "SYS_TEST",
+        "display": "System Test Specification"
+    },
+    {
+        "id": 279,
+        "typeKey": "COMP_TEST",
+        "display": "Component Test Specification"
+    },
+    {
+        "id": 280,
+        "typeKey": "MOD_TEST",
+        "display": "Module Test Specification"
+    },
+    {
+        "id": 281,
+        "typeKey": "DSCL",
+        "display": "DecisionLog"
+    },
+    {
+        "id": 282,
+        "typeKey": "TSS4_RSA",
+        "display": "RSA regulations requirement"
+    },
+    {
+        "id": 283,
+        "typeKey": "MDES",
+        "display": "MBD Model Design"
+    },
+    {
+        "id": 284,
+        "typeKey": "SUBTSTSPC",
+        "display": "MBD Software Subsystem Test Specification"
+    },
+    {
+        "id": 285,
+        "typeKey": "SUBTSTCS",
+        "display": "MBD Software Subsystem Test Case"
+    },
+    {
+        "id": 287,
+        "typeKey": "CMPTSTSPC",
+        "display": "MBD Software Component Test Specification"
+    },
+    {
+        "id": 288,
+        "typeKey": "CMPTSTCS",
+        "display": "MBD Software Component Test Case"
+    },
+    {
+        "id": 290,
+        "typeKey": "MDLTSTSPC",
+        "display": "MBD Model Test Specification"
+    },
+    {
+        "id": 291,
+        "typeKey": "MDLTSTCS",
+        "display": "MBD Model Test Case"
+    },
+    {
+        "id": 293,
+        "typeKey": "LCSTSTSPC",
+        "display": "MBD Logical Core System Test Specification"
+    },
+    {
+        "id": 295,
+        "typeKey": "LCSTSTCS",
+        "display": "MBD Logical Core System Test Case"
+    },
+    {
+        "id": 296,
+        "typeKey": "SYRD_CS_NSPEC",
+        "display": "STD A3 Core System Non Functional Requirement"
+    },
+    {
+        "id": 297,
+        "typeKey": "SYRD_EU_NSPEC",
+        "display": "STD A3 ECU Non Functional Requirement"
+    },
+    {
+        "id": 298,
+        "typeKey": "TSR_TEST",
+        "display": "TSR Test Specifications"
+    },
+    {
+        "id": 299,
+        "typeKey": "SECREQ",
+        "display": "Security Requirement"
+    },
+    {
+        "id": 300,
+        "typeKey": "TIT",
+        "display": "testItem"
+    },
+    {
+        "id": 301,
+        "typeKey": "SYRD_SPEC_OT",
+        "display": "STD Oneteam System Requirement"
+    },
+    {
+        "id": 302,
+        "typeKey": "LCSNFR",
+        "display": "MBD Logical Core System Non Functional Requirement"
+    },
+    {
+        "id": 303,
+        "typeKey": "CSSNFR",
+        "display": "MBD Core System Software Non Functional Requirement"
+    },
+    {
+        "id": 304,
+        "typeKey": "LCSR",
+        "display": "MBD Logical Core System Requirement"
+    },
+    {
+        "id": 305,
+        "typeKey": "CSSR",
+        "display": "MBD Core System Software Requirement"
+    },
+    {
+        "id": 306,
+        "typeKey": "CSSRAD",
+        "display": "MBD Core System Software Requirement Analysis Diagram"
+    },
+    {
+        "id": 307,
+        "typeKey": "SSR",
+        "display": "MBD Software Subsystem Requirement"
+    },
+    {
+        "id": 308,
+        "typeKey": "SCR",
+        "display": "MBD Software Component Requirement"
+    },
+    {
+        "id": 309,
+        "typeKey": "CSSTC",
+        "display": "MBD Core System Software Test Case"
+    },
+    {
+        "id": 310,
+        "typeKey": "CSSTS",
+        "display": "MBD Core System Software Test Specification"
+    },
+    {
+        "id": 311,
+        "typeKey": "MDL",
+        "display": "MBD Model"
+    },
+    {
+        "id": 312,
+        "typeKey": "PT1",
+        "display": "Process TRIAL_1"
+    },
+    {
+        "id": 313,
+        "typeKey": "SDAURD",
+        "display": "Z_(Obsoleted) ePF stakeholder requirement"
+    },
+    {
+        "id": 314,
+        "typeKey": "SDASC",
+        "display": "Z_(Obsoleted) ePF system requirement"
+    },
+    {
+        "id": 315,
+        "typeKey": "SDATC",
+        "display": "Test Case"
+    },
+    {
+        "id": 316,
+        "typeKey": "SDATS",
+        "display": "Test Design Specification"
+    },
+    {
+        "id": 317,
+        "typeKey": "IVISWRQ",
+        "display": "IVI SW Requirement"
+    },
+    {
+        "id": 318,
+        "typeKey": "SYRD_SPEC_OT_VAR",
+        "display": "STD Oneteam System Requirement Variation"
+    },
+    {
+        "id": 320,
+        "typeKey": "IVICRQ",
+        "display": "IVI Customer Requirement"
+    },
+    {
+        "id": 321,
+        "typeKey": "DIAG_SPEC",
+        "display": "STD Diag Communication Requirement"
+    },
+    {
+        "id": 322,
+        "typeKey": "SYRD_SPEC_VSC_IF",
+        "display": "STD Oneteam System Requirement - VSC IF supplement"
+    },
+    {
+        "id": 323,
+        "typeKey": "COM_DATA_SPEC",
+        "display": "STD Communication Data Requirement"
+    },
+    {
+        "id": 324,
+        "typeKey": "DS_SPEC",
+        "display": "STD Data Storage System Requirement"
+    },
+    {
+        "id": 325,
+        "typeKey": "SpReq",
+        "display": "Suppiler requirment"
+    },
+    {
+        "id": 326,
+        "typeKey": "sample",
+        "display": "sample_itemtype"
+    },
+    {
+        "id": 327,
+        "typeKey": "test",
+        "display": "Test Managament for AP team"
+    },
+    {
+        "id": 328,
+        "typeKey": "SRS_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SRS"
+    },
+    {
+        "id": 329,
+        "typeKey": "SAD_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SAD"
+    },
+    {
+        "id": 330,
+        "typeKey": "SDD_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SDD"
+    },
+    {
+        "id": 331,
+        "typeKey": "SyAD_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SyAD"
+    },
+    {
+        "id": 332,
+        "typeKey": "SyRS_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SyRS"
+    },
+    {
+        "id": 333,
+        "typeKey": "code_cov",
+        "display": "Code Coverage"
+    },
+    {
+        "id": 334,
+        "typeKey": "UT_RQ",
+        "display": "Z_(Obsoleted) Arene Application - UT"
+    },
+    {
+        "id": 335,
+        "typeKey": "IT_RQ",
+        "display": "Z_(Obsoleted) Arene Application - IT"
+    },
+    {
+        "id": 336,
+        "typeKey": "VT_RQ",
+        "display": "Z_(Obsoleted) Arene Application - VT"
+    },
+    {
+        "id": 339,
+        "typeKey": "SyIT_RQ",
+        "display": "Z_(Obsoleted) Arene Application - SyIT"
+    },
+    {
+        "id": 340,
+        "typeKey": "SyVT",
+        "display": "Z_(Obsoleted) Arene Application - SyVT"
+    },
+    {
+        "id": 341,
+        "typeKey": "TO_PR",
+        "display": "Z_(Obsoleted) Arene SE - Process / Tool Requirement"
+    },
+    {
+        "id": 342,
+        "typeKey": "ARXML",
+        "display": "Z_(Obsoleted) ARXML requirement"
+    },
+    {
+        "id": 343,
+        "typeKey": "TFIF",
+        "display": "test for image file"
+    },
+    {
+        "id": 344,
+        "typeKey": "SUD_SPEC",
+        "display": "STD Software Unit Element"
+    },
+    {
+        "id": 345,
+        "typeKey": "SUT_SPEC",
+        "display": "STD Software Unit Test Element"
+    },
+    {
+        "id": 346,
+        "typeKey": "SCIT_SPEC",
+        "display": "STD Software Component Integration Test Element"
+    },
+    {
+        "id": 347,
+        "typeKey": "SCQT_SPEC",
+        "display": "STD Software Component Qualification Test Element"
+    },
+    {
+        "id": 348,
+        "typeKey": "SAUC",
+        "display": "Z_(Obsoleted) Stakeholder Requirement (SWZ)"
+    },
+    {
+        "id": 349,
+        "typeKey": "AL1",
+        "display": "Z_(Obsoleted) System Requirement (Lv1)"
+    },
+    {
+        "id": 350,
+        "typeKey": "AL2",
+        "display": "Z_(Obsoleted) System Requirement (Lv2)"
+    },
+    {
+        "id": 351,
+        "typeKey": "AL3",
+        "display": "Z_(Obsoleted) System Requirement (SEMP Lv3)"
+    },
+    {
+        "id": 353,
+        "typeKey": "L4HW",
+        "display": "Z_(Obsoleted) HW requirement (SEMP Lv4)"
+    },
+    {
+        "id": 354,
+        "typeKey": "L4SW",
+        "display": "Z_(Obsoleted) SW requirement (SEMP Lv4)"
+    },
+    {
+        "id": 355,
+        "typeKey": "L5SW",
+        "display": "Z_(Obsoleted) SW requirement (SEMP Lv5)"
+    },
+    {
+        "id": 356,
+        "typeKey": "L5HW",
+        "display": "Z_(Obsoleted) HW requirement (SEMP Lv5)"
+    },
+    {
+        "id": 357,
+        "typeKey": "TC_STF",
+        "display": "Z_(Obsoleted) ePF test case - stf"
+    },
+    {
+        "id": 358,
+        "typeKey": "TLV3",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (TLv3)"
+    },
+    {
+        "id": 359,
+        "typeKey": "STF_TE",
+        "display": "Z_(Obsoleted) ePF test environment - stf"
+    },
+    {
+        "id": 360,
+        "typeKey": "ABO",
+        "display": "Business Opportunity"
+    },
+    {
+        "id": 361,
+        "typeKey": "AAD",
+        "display": "(Arene) Architecture Diagrams"
+    },
+    {
+        "id": 362,
+        "typeKey": "ATMDL",
+        "display": "Z_(Obsoleted) Arene Test Model Specification"
+    },
+    {
+        "id": 363,
+        "typeKey": "L6SW",
+        "display": "Z_(Obsoleted) SW requirement (SEMP Lv6)"
+    },
+    {
+        "id": 364,
+        "typeKey": "L6HW",
+        "display": "Z_(Obsoleted) HW requirement (SEMP Lv6)"
+    },
+    {
+        "id": 365,
+        "typeKey": "SWRD_SPEC_IOL",
+        "display": "STD IOLayer Signal List"
+    },
+    {
+        "id": 366,
+        "typeKey": "CPSWREQ",
+        "display": "Cockpit SW Requirement"
+    },
+    {
+        "id": 367,
+        "typeKey": "CPTS",
+        "display": "Cockpit test specification"
+    },
+    {
+        "id": 368,
+        "typeKey": "CPTC",
+        "display": "Cockpit test case"
+    },
+    {
+        "id": 369,
+        "typeKey": "RT",
+        "display": "Requirement for test"
+    },
+    {
+        "id": 370,
+        "typeKey": "TMP_PR",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (New_TLv3)"
+    },
+    {
+        "id": 371,
+        "typeKey": "EASREQ",
+        "display": "EAS Requirement"
+    },
+    {
+        "id": 373,
+        "typeKey": "EASTEST",
+        "display": "EAS Test Spec"
+    },
+    {
+        "id": 374,
+        "typeKey": "TUSR",
+        "display": "Z_(Obsoleted) Process & Tool User Requirement"
+    },
+    {
+        "id": 375,
+        "typeKey": "TLV1",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (TLv1)"
+    },
+    {
+        "id": 376,
+        "typeKey": "TLV2",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (TLv2)"
+    },
+    {
+        "id": 378,
+        "typeKey": "TLV4",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (TLv4)"
+    },
+    {
+        "id": 379,
+        "typeKey": "TLV5",
+        "display": "Z_(Obsoleted) Process & Tool Requirement (TLv5)"
+    },
+    {
+        "id": 381,
+        "typeKey": "SWRD_SPEC_FM",
+        "display": "STD FailureManager Variable List for TSS4"
+    },
+    {
+        "id": 383,
+        "typeKey": "ENV",
+        "display": "Environment"
+    },
+    {
+        "id": 384,
+        "typeKey": "TD",
+        "display": "Test Data"
+    },
+    {
+        "id": 385,
+        "typeKey": "SPEC2",
+        "display": "Test Spec 2"
+    },
+    {
+        "id": 386,
+        "typeKey": "TEMP_TC",
+        "display": "test case"
+    },
+    {
+        "id": 387,
+        "typeKey": "SDATP",
+        "display": "Z_(Obsoleted) Test Plan"
+    },
+    {
+        "id": 388,
+        "typeKey": "SDATE",
+        "display": "Test Environment"
+    },
+    {
+        "id": 389,
+        "typeKey": "SW_ARCH",
+        "display": "SW Architecture Element (L5)"
+    },
+    {
+        "id": 390,
+        "typeKey": "SNDBX",
+        "display": "sandbox item"
+    },
+    {
+        "id": 392,
+        "typeKey": "InfraTest",
+        "display": "Infra-test-item"
+    },
+    {
+        "id": 393,
+        "typeKey": "ARCH_NFR_OT",
+        "display": "Software Architecture Non-Functional Requirement"
+    },
+    {
+        "id": 394,
+        "typeKey": "ARCH_NFTR_OT",
+        "display": "Software Architecture NF Test Requirement"
+    },
+    {
+        "id": 395,
+        "typeKey": "SESND",
+        "display": "SE sandbox"
+    },
+    {
+        "id": 396,
+        "typeKey": "PF",
+        "display": "Z_(Obsoleted) Product Feature"
+    },
+    {
+        "id": 397,
+        "typeKey": "ARRC",
+        "display": "(Arene) Requirement Review Checklist"
+    },
+    {
+        "id": 398,
+        "typeKey": "ATC",
+        "display": "(Arene) Test Case"
+    },
+    {
+        "id": 399,
+        "typeKey": "SEITM",
+        "display": "Z_(Obsoleted) IntegrationTest Model Spec"
+    },
+    {
+        "id": 401,
+        "typeKey": "ATE",
+        "display": "(Arene) Test Environment"
+    },
+    {
+        "id": 402,
+        "typeKey": "SETEI",
+        "display": "Z_(Obsoleted) (SE) Test Environment Item"
+    },
+    {
+        "id": 403,
+        "typeKey": "Arene_1",
+        "display": "Z_(Obsoleted) System Requirement (Arene Lv.1)"
+    },
+    {
+        "id": 404,
+        "typeKey": "Arene_2",
+        "display": "Z_(Obsoleted) System Requirement (Arene Lv.2)"
+    },
+    {
+        "id": 405,
+        "typeKey": "Arene_3",
+        "display": "Z_(Obsoleted) System Requirement (Arene Lv.3)"
+    },
+    {
+        "id": 406,
+        "typeKey": "Arene_4",
+        "display": "Z_(Obsoleted) System Requirement (Arene Lv.4)"
+    },
+    {
+        "id": 407,
+        "typeKey": "ATI",
+        "display": "Z_Obsoleted (Arene) Test Items Checklist"
+    },
+    {
+        "id": 408,
+        "typeKey": "SWRD_SPEC_FMTEST",
+        "display": "STD FailureManager Special Judgment Test"
+    },
+    {
+        "id": 409,
+        "typeKey": "VAR",
+        "display": "Variation (Arene)"
+    },
+    {
+        "id": 410,
+        "typeKey": "ATM",
+        "display": "(Arene) Test Model"
+    },
+    {
+        "id": 411,
+        "typeKey": "VDCAR_VERRQ",
+        "display": "VDCAR Vehicle Requirement"
+    },
+    {
+        "id": 412,
+        "typeKey": "VDCAR_SYSRQ",
+        "display": "VDCAR System Requirement"
+    },
+    {
+        "id": 413,
+        "typeKey": "VDCAR_CPNRQ",
+        "display": "VDCAR Component Requirement"
+    },
+    {
+        "id": 414,
+        "typeKey": "VDCAR_TESTSPEC",
+        "display": "VDCAR Test Specification"
+    },
+    {
+        "id": 415,
+        "typeKey": "VDCAR_TXT",
+        "display": "VDCAR Text/Architecture"
+    },
+    {
+        "id": 416,
+        "typeKey": "DTR",
+        "display": "Z_(Obsoleted) Developer Tool Requirement (SEMP)"
+    },
+    {
+        "id": 417,
+        "typeKey": "OEM_TRIAL_ITEM",
+        "display": "OEM Trial Item Type"
+    },
+    {
+        "id": 418,
+        "typeKey": "ASY",
+        "display": "(Arene) System Requirement"
+    },
+    {
+        "id": 419,
+        "typeKey": "ASW",
+        "display": "(Arene) Software Requirement"
+    },
+    {
+        "id": 421,
+        "typeKey": "ASWV",
+        "display": "Software Verification (Arene)"
+    },
+    {
+        "id": 423,
+        "typeKey": "DPR",
+        "display": "Z_(Obsoleted) Development Platform Requirement (SEMP)"
+    },
+    {
+        "id": 424,
+        "typeKey": "DPSR",
+        "display": "Z_(Obsoleted) Development Platform Sub Requirement (SEMP)"
+    },
+    {
+        "id": 425,
+        "typeKey": "SUREQ_TST",
+        "display": "STD URQ TEST"
+    },
+    {
+        "id": 426,
+        "typeKey": "SWR_SEMP",
+        "display": "Z_(Obsoleted) Software requirement (SEMP - deprecated)"
+    },
+    {
+        "id": 429,
+        "typeKey": "MaaS_SYS_SPEC",
+        "display": "STD MaaS System Requirement"
+    },
+    {
+        "id": 430,
+        "typeKey": "POCDDC_CPNRQ",
+        "display": "POC DDC Component Requirement"
+    },
+    {
+        "id": 431,
+        "typeKey": "POCDDC_VEREQ",
+        "display": "POC  DDC Vehicle Requirement"
+    },
+    {
+        "id": 432,
+        "typeKey": "POCDDC_TXT",
+        "display": "POC DDC Text/Architecture"
+    },
+    {
+        "id": 433,
+        "typeKey": "POCDDC_SYSRQ",
+        "display": "POC DDC System Requirement"
+    },
+    {
+        "id": 434,
+        "typeKey": "POCDDC_TESTSPEC",
+        "display": "POC DDC Test Specification"
+    },
+    {
+        "id": 435,
+        "typeKey": "E_Pal",
+        "display": "Scenario"
+    },
+    {
+        "id": 436,
+        "typeKey": "EPal",
+        "display": "Behavioral Requirement"
+    },
+    {
+        "id": 437,
+        "typeKey": "Epal1",
+        "display": "ODD Element"
+    },
+    {
+        "id": 438,
+        "typeKey": "Epal2",
+        "display": "System Capability"
+    },
+    {
+        "id": 439,
+        "typeKey": "None",
+        "display": "Threshold"
+    },
+    {
+        "id": 440,
+        "typeKey": "AUC",
+        "display": "(Arene) Use Case"
+    },
+    {
+        "id": 441,
+        "typeKey": "BEVDRV_VEREQ",
+        "display": "BEVDRV Vehicle Requirement"
+    },
+    {
+        "id": 442,
+        "typeKey": "BEVDRV_CPNRQ",
+        "display": "BEVDRV Component Requirement"
+    },
+    {
+        "id": 443,
+        "typeKey": "BEVDRV_SYSRQ",
+        "display": "BEVDRV System Requirement"
+    },
+    {
+        "id": 444,
+        "typeKey": "BEVDRV_TESTSPEC",
+        "display": "BEVDRV Test Specification"
+    },
+    {
+        "id": 445,
+        "typeKey": "BEVDRV_TXT",
+        "display": "BEVDRV Text/Architecture"
+    },
+    {
+        "id": 446,
+        "typeKey": "IP_FUNC",
+        "display": "IP Functional Feature"
+    },
+    {
+        "id": 447,
+        "typeKey": "TEST_SAMPLE2",
+        "display": "sample Test Case"
+    },
+    {
+        "id": 448,
+        "typeKey": "testtest",
+        "display": "testtest"
+    },
+    {
+        "id": 449,
+        "typeKey": "REQ",
+        "display": "L5 - Behavioral Requirement"
+    },
+    {
+        "id": 450,
+        "typeKey": "CR2",
+        "display": "L5 - Change Request"
+    },
+    {
+        "id": 451,
+        "typeKey": "FR2",
+        "display": "L5 - Functional Requirement"
+    },
+    {
+        "id": 452,
+        "typeKey": "FSR2",
+        "display": "L5 - Functional Safety Requirement"
+    },
+    {
+        "id": 453,
+        "typeKey": "FSRVER",
+        "display": "L5 - FSR Verification"
+    },
+    {
+        "id": 454,
+        "typeKey": "GTRM",
+        "display": "L5 - Glossary Term"
+    },
+    {
+        "id": 455,
+        "typeKey": "HAZ2",
+        "display": "L5 - Hazard"
+    },
+    {
+        "id": 456,
+        "typeKey": "ID2",
+        "display": "L5 - Item Description"
+    },
+    {
+        "id": 457,
+        "typeKey": "ONT",
+        "display": "L5 - Ontology Item"
+    },
+    {
+        "id": 458,
+        "typeKey": "OR",
+        "display": "L5 - Operational Requirement"
+    },
+    {
+        "id": 459,
+        "typeKey": "SG2",
+        "display": "L5 - Safety Goal"
+    },
+    {
+        "id": 460,
+        "typeKey": "SCEN2",
+        "display": "L5 - Scenario"
+    },
+    {
+        "id": 461,
+        "typeKey": "SUBRQ",
+        "display": "L5 - Subsystem Requirement"
+    },
+    {
+        "id": 462,
+        "typeKey": "SYSRQ",
+        "display": "L5 - System Requirement"
+    },
+    {
+        "id": 463,
+        "typeKey": "TSR2",
+        "display": "L5 - Technical Safety Requirement"
+    },
+    {
+        "id": 464,
+        "typeKey": "TBO",
+        "display": "L5 - Test Batch Object"
+    },
+    {
+        "id": 465,
+        "typeKey": "TC2",
+        "display": "L5 - Test Case"
+    },
+    {
+        "id": 466,
+        "typeKey": "VER2",
+        "display": "L5 - Verification"
+    },
+    {
+        "id": 467,
+        "typeKey": "SAFE",
+        "display": "L5 - Safety Requirement"
+    },
+    {
+        "id": 468,
+        "typeKey": "DEF",
+        "display": "L5 - Definition"
+    },
+    {
+        "id": 469,
+        "typeKey": "WVR",
+        "display": "L5 - Waiver"
+    },
+    {
+        "id": 470,
+        "typeKey": "PROD",
+        "display": "L5 - Product Requirement"
+    },
+    {
+        "id": 471,
+        "typeKey": "MG",
+        "display": "L5 - Mission Goal"
+    },
+    {
+        "id": 472,
+        "typeKey": "BR",
+        "display": "L5 - Business Requirement"
+    },
+    {
+        "id": 473,
+        "typeKey": "PDCR",
+        "display": "POC DDC Change Request"
+    },
+    {
+        "id": 474,
+        "typeKey": "ACSSW",
+        "display": "Arene Cockpit SDK Software Requirement"
+    },
+    {
+        "id": 475,
+        "typeKey": "ACSSYS",
+        "display": "Arene Cockpit SDK System Requirement"
+    },
+    {
+        "id": 476,
+        "typeKey": "UT",
+        "display": "L5 - Unit Test"
+    },
+    {
+        "id": 477,
+        "typeKey": "SR",
+        "display": "sample requirement"
+    },
+    {
+        "id": 478,
+        "typeKey": "Arene_5",
+        "display": "Z_(Obsoleted)  (Arene) System Requirement - Dummy"
+    },
+    {
+        "id": 479,
+        "typeKey": "VAL2",
+        "display": "L5 - Validation"
+    },
+    {
+        "id": 481,
+        "typeKey": "INFO",
+        "display": "L5 - Information"
+    },
+    {
+        "id": 482,
+        "typeKey": "PD",
+        "display": "L5 - Product Direction"
+    },
+    {
+        "id": 483,
+        "typeKey": "REG",
+        "display": "L5 - Regulatory Requirement"
+    },
+    {
+        "id": 484,
+        "typeKey": "STATE",
+        "display": "L5 - State"
+    },
+    {
+        "id": 485,
+        "typeKey": "ODD",
+        "display": "L5 - ODD Requirement"
+    },
+    {
+        "id": 486,
+        "typeKey": "USECASE",
+        "display": "L5 - Use Case"
+    },
+    {
+        "id": 487,
+        "typeKey": "IRT",
+        "display": "L5 - Interface Requirement"
+    },
+    {
+        "id": 488,
+        "typeKey": "ID3",
+        "display": "L5 - Item Definition"
+    },
+    {
+        "id": 489,
+        "typeKey": "MECH",
+        "display": "L5 - Mechanical Requirement"
+    },
+    {
+        "id": 490,
+        "typeKey": "SW",
+        "display": "L5 - Software Requirement"
+    },
+    {
+        "id": 491,
+        "typeKey": "STY",
+        "display": "L5 - User Story"
+    },
+    {
+        "id": 492,
+        "typeKey": "DAD",
+        "display": "L5 - Design Architecture Document"
+    },
+    {
+        "id": 493,
+        "typeKey": "ASWD",
+        "display": "Z_(Obsoleted) (Arene) Software Requirements - Dummy"
+    },
+    {
+        "id": 494,
+        "typeKey": "NSWR",
+        "display": "New Software Requirement"
+    },
+    {
+        "id": 495,
+        "typeKey": "ACUS",
+        "display": "Customer Requirement (Arene Temp)"
+    },
+    {
+        "id": 496,
+        "typeKey": "APF",
+        "display": "(Arene) Product Feature"
+    },
+    {
+        "id": 497,
+        "typeKey": "ACR",
+        "display": "(Arene) Customer Requirement"
+    },
+    {
+        "id": 498,
+        "typeKey": "ZZZ_test",
+        "display": "ZZZ_test"
+    },
+    {
+        "id": 499,
+        "typeKey": "TC",
+        "display": "BEVDRV Test Case"
+    },
+    {
+        "id": 501,
+        "typeKey": "BEVDRV_Samp",
+        "display": "BEVDRV sample"
+    },
+    {
+        "id": 502,
+        "typeKey": "MaaS_SubSYS_SPEC",
+        "display": "STD MaaS SubSystemRequirement"
+    },
+    {
+        "id": 503,
+        "typeKey": "FOV",
+        "display": "BEVDRV Functional Overview"
+    },
+    {
+        "id": 504,
+        "typeKey": "FR",
+        "display": "BEVDRV Functional Requirement"
+    },
+    {
+        "id": 505,
+        "typeKey": "IVIARQ",
+        "display": "Z_(Obsoleted) (Test Only) IVI Customer Requirement for ARQ Tool"
+    },
+    {
+        "id": 506,
+        "typeKey": "CFOV",
+        "display": "CHASSIS Functional Overview"
+    },
+    {
+        "id": 507,
+        "typeKey": "CFR",
+        "display": "CHASSIS Functional Requirement"
+    },
+    {
+        "id": 508,
+        "typeKey": "RSSWRQ",
+        "display": "RSAPP Software Requirement"
+    },
+    {
+        "id": 509,
+        "typeKey": "ASWOS",
+        "display": "Software Requirement (Arene) - Online Service"
+    },
+    {
+        "id": 512,
+        "typeKey": "GENERAL_TYPE",
+        "display": "General Item Type for Automation"
+    },
+    {
+        "id": 513,
+        "typeKey": "CVR",
+        "display": "CHASSIS Vehicle Requirement"
+    },
+    {
+        "id": 514,
+        "typeKey": "ASWR",
+        "display": "Software Request (Arene)"
+    },
+    {
+        "id": 515,
+        "typeKey": "CSR",
+        "display": "CHASSIS System Requirement"
+    },
+    {
+        "id": 516,
+        "typeKey": "CDR",
+        "display": "CHASSIS Domain Requirement\u200b"
+    },
+    {
+        "id": 517,
+        "typeKey": "ABR",
+        "display": "Z Obsoleted_(Arene) Business Requirement"
+    },
+    {
+        "id": 518,
+        "typeKey": "ARCHUC",
+        "display": "Z_(Obsoleted) (Arene) Architecture Element (UC)"
+    },
+    {
+        "id": 519,
+        "typeKey": "AAES",
+        "display": "Z_Obsoleted (Arene) Architecture Element (Sequence)"
+    },
+    {
+        "id": 520,
+        "typeKey": "AAEI",
+        "display": "Z_Obsoleted (Arene) Architecture Element (Interface)"
+    },
+    {
+        "id": 521,
+        "typeKey": "RMS_test",
+        "display": "RMS_test"
+    },
+    {
+        "id": 522,
+        "typeKey": "SWRD_SPEC_FM_BEV",
+        "display": "STD FailureManager Variable List for BEVs3"
+    },
+    {
+        "id": 523,
+        "typeKey": "AAE",
+        "display": "(Arene) Architecture Element"
+    },
+    {
+        "id": 524,
+        "typeKey": "AQF",
+        "display": "(Arene) Quality Feedback"
+    },
+    {
+        "id": 527,
+        "typeKey": "ASP",
+        "display": "(Arene) Software Parts"
+    },
+    {
+        "id": 528,
+        "typeKey": "AAR",
+        "display": "(Arene) Architecture Requirement"
+    },
+    {
+        "id": 529,
+        "typeKey": "AAS",
+        "display": "(Arene) AI Suggestion"
+    },
+    {
+        "id": 530,
+        "typeKey": "AVS",
+        "display": "(Arene) Value Stream"
+    },
+    {
+        "id": 531,
+        "typeKey": "ADD",
+        "display": "(Arene) Data Dictionary"
+    },
+    {
+        "id": 532,
+        "typeKey": "VUC",
+        "display": "(Vertex) Use Case"
+    },
+    {
+        "id": 533,
+        "typeKey": "VSND",
+        "display": "(Vertex) Stakeholder Need"
+    },
+    {
+        "id": 534,
+        "typeKey": "VDF",
+        "display": "(Vertex) Defect"
+    },
+    {
+        "id": 535,
+        "typeKey": "VTSP",
+        "display": "(Vertex) Tech Spec"
+    },
+    {
+        "id": 536,
+        "typeKey": "VJT",
+        "display": "(Vertex) Jira Ticket"
+    },
+    {
+        "id": 537,
+        "typeKey": "VAH",
+        "display": "(Vertex) Aha! Feature"
+    },
+    {
+        "id": 538,
+        "typeKey": "VRI",
+        "display": "(Vertex) Register Item"
+    },
+    {
+        "id": 539,
+        "typeKey": "VSYS",
+        "display": "(Vertex) System Requierment"
+    },
+    {
+        "id": 540,
+        "typeKey": "VSYC",
+        "display": "(Vertex) System Constraint"
+    },
+    {
+        "id": 541,
+        "typeKey": "VSWR",
+        "display": "(Vertex) Software Requirement"
+    },
+    {
+        "id": 542,
+        "typeKey": "VSWC",
+        "display": "(Vertex) Software Constraint"
+    },
+    {
+        "id": 543,
+        "typeKey": "VSYT",
+        "display": "(Vertex) System Test"
+    },
+    {
+        "id": 544,
+        "typeKey": "VSWT",
+        "display": "(Vertex) Software Test"
+    },
+    {
+        "id": 545,
+        "typeKey": "REG_OT",
+        "display": "STD Oneteam Regulation"
+    },
+    {
+        "id": 546,
+        "typeKey": "AVZ",
+        "display": "(Arene) Product Vision"
+    },
+    {
+        "id": 547,
+        "typeKey": "ABL",
+        "display": "(Arene) Business Line"
+    },
+    {
+        "id": 548,
+        "typeKey": "VSR",
+        "display": "(Vertex) Stakeholder Requirement"
+    },
+    {
+        "id": 549,
+        "typeKey": "APP",
+        "display": "(Arene) Product Portfolio"
+    },
+    {
+        "id": 551,
+        "typeKey": "BR_SYS1_UR",
+        "display": "(BR BEV) User Requirement"
+    },
+    {
+        "id": 552,
+        "typeKey": "BR_SYS1_Reg",
+        "display": "(BR BEV) Regulation"
+    },
+    {
+        "id": 553,
+        "typeKey": "BR_SYS2_SysR",
+        "display": "(BR BEV) System Requirement"
+    },
+    {
+        "id": 554,
+        "typeKey": "BR_SYS2_VR",
+        "display": "(BR BEV) Vehicle-level Requirement"
+    },
+    {
+        "id": 555,
+        "typeKey": "BR_SYS3_SAR",
+        "display": "(BR BEV) System Architecture Requirement"
+    },
+    {
+        "id": 556,
+        "typeKey": "BR_SYS3_FR",
+        "display": "(BR BEV) Functional Requirement"
+    },
+    {
+        "id": 557,
+        "typeKey": "BR_SYS3_LR",
+        "display": "(BR BEV) Logical Structure Requirement"
+    },
+    {
+        "id": 558,
+        "typeKey": "BR_SYS3_PR",
+        "display": "(BR BEV) Physical Structure Requirement"
+    },
+    {
+        "id": 559,
+        "typeKey": "BR_HW1_HWR",
+        "display": "(BR BEV) Hardware Requirement"
+    },
+    {
+        "id": 560,
+        "typeKey": "BR_SW1_SWR",
+        "display": "(BR BEV) Software Requirement"
+    },
+    {
+        "id": 561,
+        "typeKey": "PSWRT",
+        "display": "(POC) Software requirement with syntax template"
+    },
+    {
+        "id": 562,
+        "typeKey": "BR_SWE6_SQT",
+        "display": "(BR BEV) Software Qualification Test"
+    },
+    {
+        "id": 563,
+        "typeKey": "BR_SC",
+        "display": "(BR BEV) Service Concept"
+    },
+    {
+        "id": 564,
+        "typeKey": "BR_CS",
+        "display": "(BR BEV) Control Specification"
+    },
+    {
+        "id": 565,
+        "typeKey": "BR_DN_RS",
+        "display": "(BR BEV) DENSO Requirements Specification"
+    },
+    {
+        "id": 566,
+        "typeKey": "BR_SYS1_StR",
+        "display": "(BR BEV) Stakeholder Requirement"
+    },
+    {
+        "id": 567,
+        "typeKey": "APE",
+        "display": "(Arene) Product Epic"
+    },
+    {
+        "id": 568,
+        "typeKey": "ADADAS",
+        "display": "ADADAS-GSN Goal"
+    },
+    {
+        "id": 569,
+        "typeKey": "ADADAS_C",
+        "display": "ADADAS-GSN Context"
+    },
+    {
+        "id": 570,
+        "typeKey": "ADADAS_S",
+        "display": "ADADAS-GSN Strategy"
+    },
+    {
+        "id": 571,
+        "typeKey": "ADADAS_E",
+        "display": "ADADAS-GSN Evidence"
+    },
+    {
+        "id": 572,
+        "typeKey": "GOAL1",
+        "display": "ADADAS_GSN Sub Goal L1"
+    },
+    {
+        "id": 573,
+        "typeKey": "GOAL2",
+        "display": "ADADAS_GSN Sub Goal L2"
+    },
+    {
+        "id": 574,
+        "typeKey": "GOAL3",
+        "display": "ADADAS_GSN Sub Goal L3"
+    },
+    {
+        "id": 575,
+        "typeKey": "ATQ",
+        "display": "(Arene) Trace Quality Feedback"
+    },
+    {
+        "id": 576,
+        "typeKey": "AET",
+        "display": "(Arene) Execution Task"
+    },
+    {
+        "id": 577,
+        "typeKey": "ASH",
+        "display": "(Arene) Scheduling Health Feedback"
+    },
+    {
+        "id": 578,
+        "typeKey": "ANT",
+        "display": "(Arene) Note"
+    },
+    {
+        "id": 579,
+        "typeKey": "ARCR",
+        "display": "(Arene) Change Request"
+    },
+    {
+        "id": 580,
+        "typeKey": "AARC",
+        "display": "(Arene) Architecture Review Checklist"
+    },
+    {
+        "id": 581,
+        "typeKey": "ATCC",
+        "display": "(Arene) Test Case Checklist"
+    },
+    {
+        "id": 582,
+        "typeKey": "ABS",
+        "display": "(Arene) Behavior Simulator"
+    },
+    {
+        "id": 583,
+        "typeKey": "AIC",
+        "display": "(Arene) Implementation Change"
+    },
+    {
+        "id": 585,
+        "typeKey": "STKH",
+        "display": "(Autonomy) Sandbox Stakeholder Requirement"
+    },
+    {
+        "id": 586,
+        "typeKey": "DNS_REQ",
+        "display": "(Autonomy) DENSO Requirement Specification"
+    },
+    {
+        "id": 589,
+        "typeKey": "SCRD",
+        "display": "(Autonomy) SW Component Requirement"
+    },
+    {
+        "id": 590,
+        "typeKey": "SWQT_OLD",
+        "display": "(Autonomy) Sandbox SW Test Case_OLD"
+    },
+    {
+        "id": 591,
+        "typeKey": "SCQT",
+        "display": "(Autonomy) SW Component Test Case"
+    },
+    {
+        "id": 592,
+        "typeKey": "SWRD",
+        "display": "(Autonomy) Software Requirement"
+    },
+    {
+        "id": 593,
+        "typeKey": "JSGPF",
+        "display": "(JSG) Product Feature"
+    },
+    {
+        "id": 594,
+        "typeKey": "JSGD",
+        "display": "(JSG) Definition"
+    },
+    {
+        "id": 595,
+        "typeKey": "JSGUC",
+        "display": "(JSG) Use Case"
+    },
+    {
+        "id": 596,
+        "typeKey": "JSGUR",
+        "display": "(JSG) User Requirement"
+    },
+    {
+        "id": 597,
+        "typeKey": "JSGSR",
+        "display": "(JSG) System Requirement"
+    },
+    {
+        "id": 598,
+        "typeKey": "JSGTC",
+        "display": "(JSG) Test Case"
+    },
+    {
+        "id": 599,
+        "typeKey": "SWQT",
+        "display": "(Autonomy) SW Test Case"
+    },
+    {
+        "id": 600,
+        "typeKey": "JSGRD",
+        "display": "(JSG) Requirement Draft"
+    },
+    {
+        "id": 601,
+        "typeKey": "SYRD",
+        "display": "(Autonomy) System Requirement"
+    },
+    {
+        "id": 602,
+        "typeKey": "SWRT_SPEC",
+        "display": "Software Qualification Test Element"
+    },
+    {
+        "id": 603,
+        "typeKey": "XTC",
+        "display": "(Arene-Temp) Test Case"
+    },
+    {
+        "id": 604,
+        "typeKey": "XSY",
+        "display": "(Arene-Temp) System Requirement"
+    },
+    {
+        "id": 605,
+        "typeKey": "XSW",
+        "display": "(Arene-Temp) Software Requirement"
+    },
+    {
+        "id": 606,
+        "typeKey": "XUC",
+        "display": "(Arene-Temp) Use Case"
+    },
+    {
+        "id": 607,
+        "typeKey": "XTR",
+        "display": "(Arene-Temp) Test Run"
+    },
+    {
+        "id": 608,
+        "typeKey": "XJTC",
+        "display": "(Arene-Temp) Jama Test Case"
+    },
+    {
+        "id": 609,
+        "typeKey": "XSR",
+        "display": "(Arene-Temp) Stakeholder Requirement"
+    },
+    {
+        "id": 610,
+        "typeKey": "SCRD_SWCG",
+        "display": "(Autonomy) SW Component Requirement with SWCG"
+    },
+    {
+        "id": 611,
+        "typeKey": "ASUC",
+        "display": "(Arene) Stakeholder Use Case"
+    },
+    {
+        "id": 612,
+        "typeKey": "ASTK",
+        "display": "(Arene) Stakeholder Requirement"
+    },
+    {
+        "id": 613,
+        "typeKey": "AATC",
+        "display": "(Arene) Acceptance Test Case"
+    }
+]

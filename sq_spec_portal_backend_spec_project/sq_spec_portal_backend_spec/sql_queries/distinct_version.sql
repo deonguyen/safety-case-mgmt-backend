@@ -1,0 +1,1 @@
+SELECT DISTINCT version FROM public.specification_revision

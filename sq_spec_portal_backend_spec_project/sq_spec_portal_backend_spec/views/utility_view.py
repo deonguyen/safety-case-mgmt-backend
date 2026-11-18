@@ -1,0 +1,1 @@
+# Stateless, domain-agnostic helper functions.

@@ -1,0 +1,7 @@
+python -m venv .venv_snapshot   
+./.venv_snapshot/scripts/activate   
+python.exe -m pip install --upgrade pip   
+pip install -r requirements.txt  
+pip install sq-spec-portal-backend-core --extra-index-url https://d20d6bbz9irale.cloudfront.net
+pip install python-dotenv  
+pip install psycopg2  

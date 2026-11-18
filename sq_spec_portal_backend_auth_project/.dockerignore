@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env.*
+.git
+.gitignore
+venv/
+*.db
+*.pyc
+__pycache__/
+.pytest_cache/
+sq_spec_portal_backend_admin_project/
+sq_spec_portal_backend_spec_project/

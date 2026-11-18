@@ -1,0 +1,1 @@
+SELECT DISTINCT type FROM public.specification WHERE project_id = %s
