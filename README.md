@@ -1,1 +1,0 @@
-# sq-spec-portal-backend-backend

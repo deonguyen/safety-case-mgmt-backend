@@ -1,6 +1,0 @@
-[2026-07-24 14:01:41,239] INFO | Endpoint: /spec/components | Method: GET | Status: 301 | Execution Time: 0.0180s
-[2026-07-24 14:01:41,250] INFO | Endpoint: /spec/components/ | Method: GET | Status: 401 | Execution Time: 0.0022s
-[2026-07-24 14:02:06,327] INFO | Endpoint: /spec/components | Method: GET | Status: 301 | Execution Time: 0.0452s
-[2026-07-24 14:02:06,758] INFO | Endpoint: /spec/components/ | Method: GET | Status: 200 | Execution Time: 0.4213s
-[2026-07-24 14:02:19,824] INFO | Endpoint: /spec/components | Method: GET | Status: 301 | Execution Time: 0.0078s
-[2026-07-24 14:02:20,090] INFO | Endpoint: /spec/components/ | Method: GET | Status: 200 | Execution Time: 0.2180s
